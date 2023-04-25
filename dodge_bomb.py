@@ -66,9 +66,9 @@ def main():
         screen.blit(kk_img, kk_rct)
         bb_rct.move_ip(vx, vy)
         yoko, tate = cheak_bound(screen.get_rect(), bb_rct)
-        if not yoko:
+        if not yoko: #横方向にはみ出たら
             vx *= -1
-        if not tate:
+        if not tate: #縦方向にはみ出たら
             vy *= -1
         screen.blit(bb_img, bb_rct)
         if kk_rct.colliderect(bb_rct):
